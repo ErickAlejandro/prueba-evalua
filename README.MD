@@ -63,7 +63,7 @@ listNumber = [-3, -7, -2, -5, -8]
 target = -10
 
 result = get_target_num(arr, target)
-print(f"El subarreglo de longitud máxima con suma {target} es: {result}")
+print(f"El subarreglo es: {result}, para el objetivo: {target}")
 ```
 **Salida:**
 ```
