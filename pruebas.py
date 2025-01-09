@@ -1,28 +1,27 @@
 
 
-listNumber = [5, -3, 2, -7, 8]
-numCompare = 0
+listNumber = []
+target = 0
 
-def getNumer(listNumber, numCompare):
-    n = len(listNumber)
-    array_last = []
-
-    def back(start, current):
-        nonlocal array_last
-        if sum(current) == numCompare:
-            if len(current) > len(array_last):
-                array_last = current[:]
+def get_target_num(listNumber, target):
+    max_length = 0
+    subarray = []
+    
+    for start in range(len(listNumber)):
+        current_sum = 0
+        for end in range(start, len(listNumber)):
+            current_sum += listNumber[end]
+            
+            if current_sum == target:
+                current_length = end - start + 1
                 
-        if start > n:
-            return
-            
-        for i in range(start, n):
-            back(i + 1, current + [listNumber[i]])
+                if current_length > max_length:
+                    max_length = current_length
+                    subarray = listNumber[start:end + 1]
                     
-    back(0, [])
-    return array_last
+    return subarray if max_length > 0 else []
     
             
-result = getNumer(listNumber, numCompare)
+result = get_target_num(listNumber, target)
     
-print(f"val result: {result}")
+print(f"El subarreglo es: {result}, para el objetivo: {target}")
