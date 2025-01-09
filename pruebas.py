@@ -1,7 +1,6 @@
 
-
-listNumber = []
-target = 0
+listNumber = [-3, -7, -2, -5, -8]
+target = -10
 
 def get_target_num(listNumber, target):
     max_length = 0
