@@ -143,3 +143,9 @@ Imagina que ingresa los siguientes números: `[1, -2, 1, 1, -1, 2, 4]` y su valo
 
 Esta aplicación le permite ingresar una lista de números y un valor objetivo, para luego encontrar subarreglos cuya suma sea igual al valor objetivo. Con una interfaz sencilla, podrá ver en tiempo real el arreglo y obtener rápidamente los resultados. ¡Es fácil de usar y no requiere conocimientos técnicos!
 
+### Vista de la Aplicacion
+
+![Logo](technicalTest/client/static/assets/img/ImgFrontV1.png)
+
+### Consulta por medio de POSTMAN
+Para realizar
