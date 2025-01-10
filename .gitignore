@@ -1,0 +1,66 @@
+# Archivos y directorios de dependencias
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+
+# Archivos de configuraciones de entorno
+*.env
+*.env.*
+
+# Base de datos (si no estás utilizando una base de datos remota)
+db.sqlite3
+
+# Archivos de migraciones
+migrations/
+
+# Archivos temporales y archivos generados por el servidor
+/*.log
+/*.pot
+/*.pyc
+/*.pyo
+/*.sqlite3
+
+# Archivos de compilación
+*.egg
+*.egg-info
+dist/
+build/
+
+# Archivos de configuración de IDEs y editores
+.vscode/
+.idea/
+*.swp
+
+# Archivos de configuración de pruebas
+.coverage
+nosetests.xml
+tox.ini
+*.cover
+*.log
+
+# Archivos de configuración de herramientas de caché
+.cache/
+
+# Directorio de la carpeta media
+media/
+
+# Archivos de configuración de staticfiles
+staticfiles/
+
+# Archivos de configuración de Django para el entorno de producción
+*.log
+*.bak
+
+# Otros archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de Python para dependencias
+Pipfile.lock
