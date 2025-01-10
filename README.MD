@@ -147,5 +147,66 @@ Esta aplicación le permite ingresar una lista de números y un valor objetivo, 
 
 ![Logo](technicalTest/client/static/assets/img/ImgFrontV1.png)
 
-### Consulta por medio de POSTMAN
-Para realizar
+---
+---
+---
+
+# Guía para Consultar el Endpoint `POST` en Postman
+
+Esta guía proporciona los pasos necesarios para realizar una solicitud `POST` a tu API Django utilizando Postman.
+
+## 1. Abre Postman
+
+Si no tienes Postman, puedes descargarlo desde el [sitio oficial de Postman](https://www.postman.com/downloads/).
+
+## 2. Crear una nueva solicitud (Request)
+
+1. En Postman, haz clic en el botón **"New"** en la esquina superior izquierda.
+2. Selecciona **"Request"**.
+3. Asigna un nombre a tu solicitud, por ejemplo: `Consultar subarreglo`.
+4. Elige una colección si deseas guardar la solicitud, o simplemente guarda la solicitud como "No Collection".
+
+## 3. Configurar la solicitud `POST`
+
+1. En la barra de herramientas, cambia el tipo de solicitud a `POST` (debería estar por defecto como `GET`).
+2. En el campo de URL, ingresa la URL de tu API de Django que ejecuta el `POST`. Ejemplo:
+
+    ```
+    http://localhost:8000/getTargetNum/
+    ```
+
+    Asegúrate de reemplazar `localhost:8000` con la URL de tu servidor si no estás trabajando localmente.
+
+## 4. Establecer el cuerpo (Body) de la solicitud
+
+1. Haz clic en la pestaña **Body** debajo de la barra de URL.
+2. Selecciona la opción **raw**.
+3. En el cuadro desplegable de la derecha, selecciona **JSON**.
+4. Ingresa el siguiente contenido JSON en el cuadro de texto de Body:
+
+    ```json
+    {
+      "array": [1, -2, 1, 1, -1, 2, 4],
+      "target": 3
+    }
+    ```
+
+    **Nota**: Asegúrate de modificar el arreglo `array` y el valor `target` según lo que desees consultar.
+
+## 5. Enviar la solicitud
+
+1. Haz clic en el botón **Send** en la parte superior derecha de la ventana de Postman.
+2. Espera la respuesta de la API.
+
+## 6. Verificar la respuesta
+
+Si la solicitud fue exitosa, recibirás una respuesta en formato JSON. Ejemplo de respuesta exitosa:
+
+```json
+{
+  "subarray": [1, -2, 1, 1, -1, 2]
+}
+```
+
+## Nota:
+De mis Agradecimientos por la consideracion, att: Ing. Erick Alejandro Ayala Churo :).
